@@ -1,8 +1,8 @@
 package com.hello.core.discount;
 
-import com.hello.core.memeber.Member;
+import com.hello.core.member.Member;
 
-import static com.hello.core.memeber.Grade.VIP;
+import static com.hello.core.member.Grade.VIP;
 
 public class RateDiscountPolicy implements DiscountPolicy {
 

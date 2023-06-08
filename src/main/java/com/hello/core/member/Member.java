@@ -1,4 +1,4 @@
-package com.hello.core.memeber;
+package com.hello.core.member;
 
 public class Member {
     private Long id;
