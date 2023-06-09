@@ -1,5 +1,8 @@
 package com.hello.core.lifecycle;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 public class NetworkClient {
 
     private String url;
@@ -21,10 +24,12 @@ public class NetworkClient {
         System.out.println("call : " + url + " message: " + message);
     }
 
+    @PostConstruct
     public void disconnect() {
         System.out.println("close : " + url);
     }
 
+    @PreDestroy
     public void init() throws Exception {
         System.out.println("Network Client init");
         connect();
