@@ -24,18 +24,19 @@ public class NetworkClient {
         System.out.println("call : " + url + " message: " + message);
     }
 
-    @PostConstruct
+
     public void disconnect() {
         System.out.println("close : " + url);
     }
 
-    @PreDestroy
+    @PostConstruct
     public void init() throws Exception {
         System.out.println("Network Client init");
         connect();
         call("초기화 연결 메세지");
     }
 
+    @PreDestroy
     public void close() throws Exception {
         System.out.println("Network Client close");
         disconnect();
